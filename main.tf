@@ -273,7 +273,7 @@ resource "datadog_timeboard" "rds" {
 }
 
 module "monitor_cpu_usage" {
-  source  = "github.com/traveloka/terraform-datadog-monitor"
+  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.1.8"
   enabled = "${local.monitor_enabled}"
 
   product_domain = "${var.product_domain}"
@@ -297,7 +297,7 @@ module "monitor_cpu_usage" {
 }
 
 module "monitor_free_storage_percentage" {
-  source  = "github.com/traveloka/terraform-datadog-monitor"
+  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.1.8"
   enabled = "${local.monitor_enabled}"
 
   product_domain = "${var.product_domain}"
@@ -321,7 +321,7 @@ module "monitor_free_storage_percentage" {
 }
 
 module "monitor_db_connection_count" {
-  source  = "github.com/traveloka/terraform-datadog-monitor"
+  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.1.8"
   enabled = "${local.monitor_enabled}"
 
   product_domain = "${var.product_domain}"
