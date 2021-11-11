@@ -88,7 +88,7 @@ variable "free_storage_percentage_thresholds" {
   type = map(string)
 
   default = {
-    critical = 70
+    critical = 30
     warning  = 50
   }
 
@@ -111,7 +111,7 @@ variable "db_connection_count_thresholds" {
   type = map(string)
 
   default = {
-    critical = "No default value"
+    critical = "0"
   }
 
   description = "The warning and critical thresholds for DB Connection Count Monitoring"
