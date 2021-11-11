@@ -125,7 +125,7 @@ resource "datadog_dashboard" "rds" {
       title = "Network Transmit Throughput"
 
       request {
-        q            = "avg:aws.rds.oldest_replication_slot_lag{$rds_name, $environment} by {hostname}"
+        q            = "avg:aws.rds.network_transmit_throughput{$rds_name, $environment} by {hostname}"
         display_type = "area"
       }
     }
@@ -147,7 +147,7 @@ resource "datadog_dashboard" "rds" {
       title = "Read IOPS"
 
       request {
-        q            = "avg:aws.rds.oldest_replication_slot_lag{$rds_name, $environment} by {hostname}"
+        q            = "avg:aws.rds.read_iops{$rds_name, $environment} by {hostname}"
         display_type = "area"
       }
     }
