@@ -21,4 +21,9 @@ module "rds" {
     critical = 5
     warning  = 10
   }
+
+  burst_balance_thresholds = {
+    critical = 70
+    warning  = 80
+  }
 }

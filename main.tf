@@ -27,7 +27,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.bin_log_disk_usage{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -38,7 +38,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.burst_balance{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -49,7 +49,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.cpuutilization{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -60,7 +60,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.database_connections{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -71,7 +71,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.disk_queue_depth{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -82,7 +82,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.free_storage_space{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -93,7 +93,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.freeable_memory{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -104,7 +104,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.maximum_used_transaction_ids{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -115,7 +115,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.network_receive_throughput{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -126,7 +126,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.network_transmit_throughput{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -137,7 +137,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.oldest_replication_slot_lag{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -148,7 +148,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.read_iops{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -159,7 +159,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.read_latency{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -170,7 +170,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.read_throughput{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -181,7 +181,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.replica_lag{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -192,7 +192,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.replication_slot_disk_usage{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -203,7 +203,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.swap_usage{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -214,7 +214,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.total_storage_space{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -225,7 +225,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.transaction_logs_disk_usage{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -236,7 +236,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.transaction_logs_generation{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -247,7 +247,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.write_iops{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -258,7 +258,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.write_latency{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -269,7 +269,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.write_throughput{$rds_name, $environment} by {hostname}"
-        display_type = "area"
+        display_type = var.display_type
       }
     }
   }
@@ -280,7 +280,7 @@ resource "datadog_dashboard" "rds" {
 
       request {
         q            = "avg:aws.rds.cpucredit_balance{$rds_name,$environment} by {hostname}"
-        display_type = "line"
+        display_type = var.display_type
       }
     }
   }
@@ -349,6 +349,30 @@ module "monitor_db_connection_count" {
   thresholds         = var.db_connection_count_thresholds
   message            = var.db_connection_count_message
   escalation_message = var.db_connection_count_escalation_message
+
+  recipients         = var.recipients
+  alert_recipients   = var.alert_recipients
+  warning_recipients = var.warning_recipients
+
+  renotify_interval = var.renotify_interval
+  notify_audit      = var.notify_audit
+}
+
+module "monitor_burst_balance" {
+  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.2.0"
+  enabled = local.monitor_enabled
+
+  product_domain = var.product_domain
+  service        = var.service
+  environment    = var.environment
+  tags           = var.tags
+  timeboard_id   = join(",", datadog_dashboard.rds.*.id)
+
+  name               = "${var.product_domain} - ${var.rds_name} - ${var.environment} - RDS Burst balance is low"
+  query              = "avg(last_5m):avg:aws.rds.burst_balance{name:${var.rds_name}, environment:${var.environment}} by {hostname} <= ${var.burst_balance_thresholds["critical"]}"
+  thresholds         = var.burst_balance_thresholds
+  message            = var.burst_balance_message
+  escalation_message = var.burst_balance_escalation_message
 
   recipients         = var.recipients
   alert_recipients   = var.alert_recipients

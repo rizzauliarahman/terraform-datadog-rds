@@ -35,4 +35,12 @@ module "rds" {
 
   db_connection_count_message            = "Monitor is triggered"
   db_connection_count_escalation_message = "Monitor isn't resolved for given interval"
+
+  burst_balance_thresholds = {
+    critical = 70
+    warning  = 80
+  }
+
+  burst_balance_message            = "Monitor is triggered"
+  burst_balance_escalation_message = "Monitor isn't resolved for given interval"
 }

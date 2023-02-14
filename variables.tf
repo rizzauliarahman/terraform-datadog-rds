@@ -128,3 +128,32 @@ variable "db_connection_count_escalation_message" {
   default     = ""
   description = "The escalation message when DB Connection Count Monitor isn't resolved for given time"
 }
+
+variable "burst_balance_thresholds" {
+  type = map(string)
+
+  default = {
+    critical = 80
+    warning  = 90
+  }
+
+  description = "The warning and critical thresholds for RDS Burst Balance Monitoring"
+}
+
+variable "burst_balance_message" {
+  type        = string
+  default     = ""
+  description = "The message when RDS Burst Balance Monitor triggered"
+}
+
+variable "burst_balance_escalation_message" {
+  type        = string
+  default     = ""
+  description = "The escalation message when RDS Burst Balance Monitor isn't resolved for given time"
+}
+
+variable "display_type" {
+  type        = string
+  default     = "area"
+  description = "How to display the marker lines. Valid values are area, bars, line."
+}

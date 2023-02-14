@@ -18,3 +18,7 @@ output "monitor_db_connection_count_name" {
   description = "The name of datadog monitor for DB Connection Count"
 }
 
+output "monitor_burst_balance_name" {
+  value       = module.monitor_burst_balance.name
+  description = "The name of datadog monitor for RDS Burst Balance"
+}
