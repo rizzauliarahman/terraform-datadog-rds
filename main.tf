@@ -287,7 +287,7 @@ resource "datadog_dashboard" "rds" {
 }
 
 module "monitor_cpu_usage" {
-  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.2.0"
+  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.3.0"
   enabled = local.monitor_enabled
 
   product_domain = var.product_domain
@@ -311,7 +311,7 @@ module "monitor_cpu_usage" {
 }
 
 module "monitor_free_storage_percentage" {
-  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.2.0"
+  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.3.0"
   enabled = local.monitor_enabled
 
   product_domain = var.product_domain
@@ -335,7 +335,7 @@ module "monitor_free_storage_percentage" {
 }
 
 module "monitor_db_connection_count" {
-  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.2.0"
+  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.3.0"
   enabled = local.monitor_enabled
 
   product_domain = var.product_domain
@@ -359,7 +359,7 @@ module "monitor_db_connection_count" {
 }
 
 module "monitor_burst_balance" {
-  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.2.0"
+  source  = "github.com/traveloka/terraform-datadog-monitor?ref=v0.3.0"
   enabled = local.monitor_enabled
 
   product_domain = var.product_domain
